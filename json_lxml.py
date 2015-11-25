@@ -23,6 +23,9 @@ def element(k, v):
     if isinstance(v, dict):
         for ck,cv in v.items():
             node.append(element(ck, cv))
+    elif isinstance(v, unicode):
+        node.set('type', type(v).__name__)
+        node.text=v.encode('utf8')
     elif isinstance(v, (int,float,bool,basestring,types.NoneType)): # scalar
         node.set('type', type(v).__name__)
         node.text=str(v)
