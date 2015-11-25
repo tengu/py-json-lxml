@@ -4,7 +4,7 @@ setup(
     name = "json-lxml",
     py_modules = ["json_lxml"],
     scripts = ["json_lxml.py"],
-    version = "0.1.3",
+    version = "0.1.4",
     license = "LGPL",
     platforms = ['POSIX', 'Windows'],
     install_requires=["lxml"],
